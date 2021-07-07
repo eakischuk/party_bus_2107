@@ -71,4 +71,15 @@ context 'Capacity' do
 
     expect(bus.over_capacity?). to eq(false)
   end
+
+  it 'checks if bus capacity is exceeded' do
+    bus = Bus.new("Mikes Awesome Bus", 4)
+    bus.add_passenger('Mike')
+    bus.add_passenger('Megan')
+    bus.add_passenger('Tim')
+    bus.add_passenger('Eve')
+    bus.add_passenger('Alice')
+
+    expect(bus.over_capacity?). to eq(true)
+  end
 end
