@@ -19,4 +19,8 @@ class Bus
     @unruly_passengers
   end
 
+  def number_of_passengers
+    @passengers.length
+  end
+
 end
