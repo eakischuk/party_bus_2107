@@ -23,4 +23,8 @@ class Bus
     @passengers.length
   end
 
+  def over_capacity?
+    number_of_passengers > @capacity
+  end
+
 end
