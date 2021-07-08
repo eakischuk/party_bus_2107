@@ -5,7 +5,7 @@ class Bus
     @name = name
     @capacity = capacity
     @passengers = []
-    @unruly_passengers = []
+
   end
 
   def add_passenger (passenger_name)
@@ -13,10 +13,7 @@ class Bus
   end
 
   def yell_at_passengers
-    passengers.each do |passenger|
-      @unruly_passengers << passenger.upcase
-    end
-    @unruly_passengers
+    @passengers.map {|passenger| passenger.upcase}
   end
 
   def number_of_passengers
